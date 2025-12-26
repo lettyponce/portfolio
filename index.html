@@ -1,11 +1,235 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Developer portfolio — projects, skills, contact." />
+  <title>Your Name — Developer Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon (replace with your own) -->
+  <link rel="icon" href="data:,">
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>This is a paragraph of text.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home" aria-label="Homepage">YourName</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" role="navigation" aria-label="Primary navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle color theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Hi, I'm <span class="accent">Your Name</span></h1>
+          <p class="lead">I build accessible, performant web apps and delightful developer experiences. Currently focusing on frontend engineering, design systems, and API integrations.</p>
+          <p class="cta-row">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn outline" href="#contact">Get in touch</a>
+          </p>
+          <ul class="hero-meta">
+            <li>Location: Your City</li>
+            <li>Open to: Freelance & Full-time</li>
+          </ul>
+        </div>
+
+        <aside class="hero-card" aria-hidden="false">
+          <!-- Replace the placeholder with your photo or an SVG -->
+          <div class="avatar" aria-hidden="true">YN</div>
+          <p class="quote">"Ship polished software that solves real problems."</p>
+          <p class="small muted">Available for new projects & collaborations.</p>
+          <p class="socials">
+            <a href="#" aria-label="GitHub">GitHub</a> ·
+            <a href="#" aria-label="LinkedIn">LinkedIn</a> ·
+            <a href="#" aria-label="Twitter">Twitter</a>
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2>Selected Projects</h2>
+        <p class="muted">A selection of recent work — click to view the repo or live demo.</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-media" role="img" aria-label="Project 1 screenshot"></div>
+            <div class="project-body">
+              <h3 class="project-title">Project One</h3>
+              <p class="project-desc">Short description of the project, tech used and purpose.</p>
+              <p class="project-tags">
+                <span>React</span><span>TypeScript</span><span>Vite</span>
+              </p>
+              <p class="project-actions">
+                <a class="btn small" href="#">Live</a>
+                <a class="btn small outline" href="#">Repo</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media" role="img" aria-label="Project 2 screenshot"></div>
+            <div class="project-body">
+              <h3 class="project-title">Project Two</h3>
+              <p class="project-desc">A performant API-driven app with CI/CD and tests.</p>
+              <p class="project-tags">
+                <span>Node</span><span>Express</span><span>Postgres</span>
+              </p>
+              <p class="project-actions">
+                <a class="btn small" href="#">Live</a>
+                <a class="btn small outline" href="#">Repo</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media" role="img" aria-label="Project 3 screenshot"></div>
+            <div class="project-body">
+              <h3 class="project-title">Project Three</h3>
+              <p class="project-desc">Design system and component library with docs and tests.</p>
+              <p class="project-tags">
+                <span>Storybook</span><span>CSS</span><span>Accessibility</span>
+              </p>
+              <p class="project-actions">
+                <a class="btn small" href="#">Live</a>
+                <a class="btn small outline" href="#">Repo</a>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <p class="muted">Languages, frameworks, tools I use regularly.</p>
+        <ul class="skill-list" aria-label="Skills">
+          <li>JavaScript / TypeScript</li>
+          <li>React / Next.js</li>
+          <li>HTML & CSS (Flexbox, Grid)</li>
+          <li>Node.js / Express</li>
+          <li>Testing (Jest, Playwright)</li>
+          <li>Git / CI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div>
+            <p>I’m a developer who cares about performance, accessibility, and good UX. I enjoy translating product goals into maintainable code and delightful interfaces. Outside work I like biking, photography, and learning new languages.</p>
+            <p>Want a resume? <a href="#" download>Download PDF</a></p>
+          </div>
+          <div class="about-quick">
+            <dl>
+              <dt>Experience</dt><dd>5+ years</dd>
+              <dt>Location</dt><dd>Your City, Country</dd>
+              <dt>Availability</dt><dd>Open to new opportunities</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="muted">Let's build something together — send a message or email me directly at <a href="mailto:you@example.com">you@example.com</a>.</p>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div class="form-grid">
+            <label>
+              <span class="label-text">Name</span>
+              <input type="text" name="name" required placeholder="Your name">
+            </label>
+
+            <label>
+              <span class="label-text">Email</span>
+              <input type="email" name="email" required placeholder="you@example.com">
+            </label>
+
+            <label class="full">
+              <span class="label-text">Message</span>
+              <textarea name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
+            </label>
+
+            <p class="form-actions">
+              <button class="btn primary" type="submit">Send message</button>
+              <button class="btn outline" type="reset">Reset</button>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name — Built with care.</p>
+      <nav aria-label="Footer">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Small UI helpers: nav toggle + theme toggle + year
+    (function () {
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.getElementById('primary-navigation');
+      navToggle && navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+
+      const themeToggle = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      const stored = localStorage.getItem('theme');
+      if (stored === 'dark' || (!stored && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        root.classList.add('theme-dark');
+        if (themeToggle) themeToggle.textContent = '☀️';
+        if (themeToggle) themeToggle.setAttribute('aria-pressed', 'true');
+      }
+
+      themeToggle && themeToggle.addEventListener('click', () => {
+        const isDark = root.classList.toggle('theme-dark');
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+
+      // fill current year
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
