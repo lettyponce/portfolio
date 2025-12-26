@@ -1,235 +1,710 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Developer portfolio — projects, skills, contact." />
-  <title>Your Name — Developer Portfolio</title>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfólio Mobile — projetos iOS, Android e Flutter." />
+    <title>Letícia Fuzzatti — Mobile Developer</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <body>
+    <a class="skip-link" href="#content" data-i18n="a11y.skip"></a>
 
-  <!-- Favicon (replace with your own) -->
-  <link rel="icon" href="data:,">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#home" aria-label="Homepage">YourName</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Voltar ao topo">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span class="brand-text">Letícia Fuzzatti</span>
+        </a>
 
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
-        <span class="hamburger" aria-hidden="true"></span>
-        <span class="sr-only">Toggle navigation</span>
-      </button>
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#work" data-i18n="nav.work"></a>
+          <a href="#about" data-i18n="nav.about"></a>
+          <a href="#skills" data-i18n="nav.skills"></a>
+          <a href="#connect" data-i18n="nav.connect"></a>
+        </nav>
 
-      <nav id="primary-navigation" class="primary-nav" role="navigation" aria-label="Primary navigation">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <button id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle color theme">🌙</button>
-    </div>
-  </header>
-
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1>Hi, I'm <span class="accent">Your Name</span></h1>
-          <p class="lead">I build accessible, performant web apps and delightful developer experiences. Currently focusing on frontend engineering, design systems, and API integrations.</p>
-          <p class="cta-row">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn outline" href="#contact">Get in touch</a>
-          </p>
-          <ul class="hero-meta">
-            <li>Location: Your City</li>
-            <li>Open to: Freelance & Full-time</li>
-          </ul>
-        </div>
-
-        <aside class="hero-card" aria-hidden="false">
-          <!-- Replace the placeholder with your photo or an SVG -->
-          <div class="avatar" aria-hidden="true">YN</div>
-          <p class="quote">"Ship polished software that solves real problems."</p>
-          <p class="small muted">Available for new projects & collaborations.</p>
-          <p class="socials">
-            <a href="#" aria-label="GitHub">GitHub</a> ·
-            <a href="#" aria-label="LinkedIn">LinkedIn</a> ·
-            <a href="#" aria-label="Twitter">Twitter</a>
-          </p>
-        </aside>
-      </div>
-    </section>
-
-    <section id="projects" class="section projects">
-      <div class="container">
-        <h2>Selected Projects</h2>
-        <p class="muted">A selection of recent work — click to view the repo or live demo.</p>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-media" role="img" aria-label="Project 1 screenshot"></div>
-            <div class="project-body">
-              <h3 class="project-title">Project One</h3>
-              <p class="project-desc">Short description of the project, tech used and purpose.</p>
-              <p class="project-tags">
-                <span>React</span><span>TypeScript</span><span>Vite</span>
-              </p>
-              <p class="project-actions">
-                <a class="btn small" href="#">Live</a>
-                <a class="btn small outline" href="#">Repo</a>
-              </p>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media" role="img" aria-label="Project 2 screenshot"></div>
-            <div class="project-body">
-              <h3 class="project-title">Project Two</h3>
-              <p class="project-desc">A performant API-driven app with CI/CD and tests.</p>
-              <p class="project-tags">
-                <span>Node</span><span>Express</span><span>Postgres</span>
-              </p>
-              <p class="project-actions">
-                <a class="btn small" href="#">Live</a>
-                <a class="btn small outline" href="#">Repo</a>
-              </p>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media" role="img" aria-label="Project 3 screenshot"></div>
-            <div class="project-body">
-              <h3 class="project-title">Project Three</h3>
-              <p class="project-desc">Design system and component library with docs and tests.</p>
-              <p class="project-tags">
-                <span>Storybook</span><span>CSS</span><span>Accessibility</span>
-              </p>
-              <p class="project-actions">
-                <a class="btn small" href="#">Live</a>
-                <a class="btn small outline" href="#">Repo</a>
-              </p>
-            </div>
-          </article>
+        <div class="header-actions">
+          <div class="lang-switch" aria-label="Language switch">
+            <button class="btn small" type="button" data-lang="pt" aria-pressed="true">PT</button>
+            <button class="btn small" type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
         </div>
       </div>
-    </section>
+    </header>
 
-    <section id="skills" class="section">
-      <div class="container">
-        <h2>Skills</h2>
-        <p class="muted">Languages, frameworks, tools I use regularly.</p>
-        <ul class="skill-list" aria-label="Skills">
-          <li>JavaScript / TypeScript</li>
-          <li>React / Next.js</li>
-          <li>HTML & CSS (Flexbox, Grid)</li>
-          <li>Node.js / Express</li>
-          <li>Testing (Jest, Playwright)</li>
-          <li>Git / CI</li>
-        </ul>
-      </div>
-    </section>
+    <main id="content">
+      <!-- HERO -->
+      <section id="top" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+            <h1 data-i18n="hero.title"></h1>
+            <p class="lead" data-i18n="hero.lead"></p>
 
-    <section id="about" class="section about">
-      <div class="container">
-        <h2>About</h2>
-        <div class="about-grid">
+            <div class="cta-row">
+              <a class="btn primary" href="#work" data-i18n="hero.ctaProjects"></a>
+              <a class="btn" href="#connect" data-i18n="hero.ctaContact"></a>
+            </div>
+
+            <ul class="quick-facts" aria-label="Destaques rápidos">
+              <li data-i18n="hero.facts.0"></li>
+              <li data-i18n="hero.facts.1"></li>
+              <li data-i18n="hero.facts.2"></li>
+            </ul>
+          </div>
+
+          <div class="hero-card" aria-label="Cartão de destaque">
+            <div class="hero-card-inner">
+              <div class="avatar" aria-hidden="true">
+                <!-- Substitua por sua foto -->
+                <img src="assets/profile.jpg" alt="" />
+              </div>
+
+              <div>
+                <h2 class="hero-name">Letícia Fuzzatti</h2>
+                <p class="hero-role" data-i18n="hero.role"></p>
+
+                <div class="hero-links">
+                  <a href="https://github.com/SEU_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
+                  <a href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+                  <a href="#connect" data-i18n="hero.emailAnchor"></a>
+                </div>
+
+                <p class="hero-note" data-i18n="hero.note"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section id="work" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="work.title"></h2>
+            <p class="muted" data-i18n="work.subtitle"></p>
+          </div>
+
+          <div class="chips" aria-label="Tags de tecnologia (exibição)">
+            <span class="chip">Swift</span>
+            <span class="chip">SwiftUI</span>
+            <span class="chip">UIKit</span>
+            <span class="chip">Kotlin</span>
+            <span class="chip">Compose</span>
+            <span class="chip">Flutter</span>
+            <span class="chip">Firebase</span>
+            <span class="chip">CI/CD</span>
+          </div>
+
+          <!-- TOP PROJECTS -->
+          <div class="subsection-head">
+            <h3 data-i18n="work.topTitle"></h3>
+            <p class="muted" data-i18n="work.topSubtitle"></p>
+          </div>
+
+          <div class="projects">
+            <!-- TOP PROJECT 1 -->
+            <article class="project">
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title" data-i18n="projects.top1.title"></h3>
+                  <div class="meta">
+                    <span class="tag" data-i18n="projects.top1.tags.0"></span>
+                    <span class="tag" data-i18n="projects.top1.tags.1"></span>
+                    <span class="tag" data-i18n="projects.top1.tags.2"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="year">2025</span>
+                  </div>
+                </div>
+
+                <div class="project-links">
+                  <a class="link" href="#" target="_blank" rel="noreferrer" data-i18n="projects.links.case"></a>
+                  <a class="link" href="#" target="_blank" rel="noreferrer" data-i18n="projects.links.code"></a>
+                </div>
+              </div>
+
+              <p class="project-desc" data-i18n="projects.top1.desc"></p>
+
+              <ul class="bullets">
+                <li data-i18n="projects.top1.bullets.0"></li>
+                <li data-i18n="projects.top1.bullets.1"></li>
+                <li data-i18n="projects.top1.bullets.2"></li>
+              </ul>
+
+              <div class="gallery" aria-label="Screenshots do projeto">
+                <img src="assets/projects/top1-1.jpg" alt="Screenshot — 1" loading="lazy" />
+                <img src="assets/projects/top1-2.jpg" alt="Screenshot — 2" loading="lazy" />
+                <img src="assets/projects/top1-3.jpg" alt="Screenshot — 3" loading="lazy" />
+                <img src="assets/projects/top1-4.jpg" alt="Screenshot — 4" loading="lazy" />
+              </div>
+            </article>
+
+            <!-- TOP PROJECT 2 -->
+            <article class="project">
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title" data-i18n="projects.top2.title"></h3>
+                  <div class="meta">
+                    <span class="tag" data-i18n="projects.top2.tags.0"></span>
+                    <span class="tag" data-i18n="projects.top2.tags.1"></span>
+                    <span class="tag" data-i18n="projects.top2.tags.2"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="year">2025</span>
+                  </div>
+                </div>
+
+                <div class="project-links">
+                  <a class="link" href="#" target="_blank" rel="noreferrer" data-i18n="projects.links.store"></a>
+                  <a class="link" href="#" target="_blank" rel="noreferrer" data-i18n="projects.links.code"></a>
+                </div>
+              </div>
+
+              <p class="project-desc" data-i18n="projects.top2.desc"></p>
+
+              <ul class="bullets">
+                <li data-i18n="projects.top2.bullets.0"></li>
+                <li data-i18n="projects.top2.bullets.1"></li>
+                <li data-i18n="projects.top2.bullets.2"></li>
+              </ul>
+
+              <div class="gallery" aria-label="Screenshots do projeto">
+                <img src="assets/projects/top2-1.jpg" alt="Screenshot — 1" loading="lazy" />
+                <img src="assets/projects/top2-2.jpg" alt="Screenshot — 2" loading="lazy" />
+                <img src="assets/projects/top2-3.jpg" alt="Screenshot — 3" loading="lazy" />
+              </div>
+            </article>
+
+            <!-- TOP PROJECT 3 -->
+            <article class="project">
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title" data-i18n="projects.top3.title"></h3>
+                  <div class="meta">
+                    <span class="tag" data-i18n="projects.top3.tags.0"></span>
+                    <span class="tag" data-i18n="projects.top3.tags.1"></span>
+                    <span class="tag" data-i18n="projects.top3.tags.2"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="year">2024</span>
+                  </div>
+                </div>
+
+                <div class="project-links">
+                  <a class="link" href="#" target="_blank" rel="noreferrer" data-i18n="projects.links.case"></a>
+                  <a class="link" href="#" target="_blank" rel="noreferrer" data-i18n="projects.links.code"></a>
+                </div>
+              </div>
+
+              <p class="project-desc" data-i18n="projects.top3.desc"></p>
+
+              <ul class="bullets">
+                <li data-i18n="projects.top3.bullets.0"></li>
+                <li data-i18n="projects.top3.bullets.1"></li>
+                <li data-i18n="projects.top3.bullets.2"></li>
+              </ul>
+
+              <div class="gallery" aria-label="Screenshots do projeto">
+                <img src="assets/projects/top3-1.jpg" alt="Screenshot — 1" loading="lazy" />
+                <img src="assets/projects/top3-2.jpg" alt="Screenshot — 2" loading="lazy" />
+              </div>
+            </article>
+          </div>
+
+          <!-- MORE PROJECTS -->
+          <div class="subsection-head">
+            <h3 data-i18n="work.moreTitle"></h3>
+            <p class="muted" data-i18n="work.moreSubtitle"></p>
+          </div>
+
+          <div class="projects compact">
+            <!-- MORE 1 -->
+            <article class="project compact-card">
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title" data-i18n="projects.more1.title"></h3>
+                  <div class="meta">
+                    <span class="tag" data-i18n="projects.more1.tags.0"></span>
+                    <span class="tag" data-i18n="projects.more1.tags.1"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="year">2024</span>
+                  </div>
+                </div>
+
+                <div class="project-links">
+                  <a class="link" href="#" target="_blank" rel="noreferrer" data-i18n="projects.links.code"></a>
+                </div>
+              </div>
+
+              <p class="project-desc" data-i18n="projects.more1.desc"></p>
+            </article>
+
+            <!-- MORE 2 -->
+            <article class="project compact-card">
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title" data-i18n="projects.more2.title"></h3>
+                  <div class="meta">
+                    <span class="tag" data-i18n="projects.more2.tags.0"></span>
+                    <span class="tag" data-i18n="projects.more2.tags.1"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="year">2023</span>
+                  </div>
+                </div>
+
+                <div class="project-links">
+                  <a class="link" href="#" target="_blank" rel="noreferrer" data-i18n="projects.links.case"></a>
+                </div>
+              </div>
+
+              <p class="project-desc" data-i18n="projects.more2.desc"></p>
+            </article>
+
+            <!-- MORE 3 -->
+            <article class="project compact-card">
+              <div class="project-top">
+                <div>
+                  <h3 class="project-title" data-i18n="projects.more3.title"></h3>
+                  <div class="meta">
+                    <span class="tag" data-i18n="projects.more3.tags.0"></span>
+                    <span class="tag" data-i18n="projects.more3.tags.1"></span>
+                    <span class="dot" aria-hidden="true"></span>
+                    <span class="year">2022</span>
+                  </div>
+                </div>
+
+                <div class="project-links">
+                  <a class="link" href="#" target="_blank" rel="noreferrer" data-i18n="projects.links.code"></a>
+                </div>
+              </div>
+
+              <p class="project-desc" data-i18n="projects.more3.desc"></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section alt">
+        <div class="container about-grid">
           <div>
-            <p>I’m a developer who cares about performance, accessibility, and good UX. I enjoy translating product goals into maintainable code and delightful interfaces. Outside work I like biking, photography, and learning new languages.</p>
-            <p>Want a resume? <a href="#" download>Download PDF</a></p>
+            <h2 data-i18n="about.title"></h2>
+            <p data-i18n="about.body"></p>
+
+            <div class="about-cards">
+              <div class="mini-card">
+                <h3 data-i18n="about.cards.0.title"></h3>
+                <p data-i18n="about.cards.0.body"></p>
+              </div>
+              <div class="mini-card">
+                <h3 data-i18n="about.cards.1.title"></h3>
+                <p data-i18n="about.cards.1.body"></p>
+              </div>
+            </div>
           </div>
-          <div class="about-quick">
-            <dl>
-              <dt>Experience</dt><dd>5+ years</dd>
-              <dt>Location</dt><dd>Your City, Country</dd>
-              <dt>Availability</dt><dd>Open to new opportunities</dd>
-            </dl>
+
+          <aside class="about-aside">
+            <div class="aside-card">
+              <h3 data-i18n="about.highlights.title"></h3>
+              <ul>
+                <li data-i18n="about.highlights.items.0"></li>
+                <li data-i18n="about.highlights.items.1"></li>
+                <li data-i18n="about.highlights.items.2"></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-i18n="skills.title"></h2>
+            <p class="muted" data-i18n="skills.subtitle"></p>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h3 data-i18n="skills.cards.0.title"></h3>
+              <ul class="skill-list">
+                <li data-i18n="skills.cards.0.items.0"></li>
+                <li data-i18n="skills.cards.0.items.1"></li>
+                <li data-i18n="skills.cards.0.items.2"></li>
+                <li data-i18n="skills.cards.0.items.3"></li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <h3 data-i18n="skills.cards.1.title"></h3>
+              <ul class="skill-list">
+                <li data-i18n="skills.cards.1.items.0"></li>
+                <li data-i18n="skills.cards.1.items.1"></li>
+                <li data-i18n="skills.cards.1.items.2"></li>
+              </ul>
+            </div>
+
+            <div class="skill-card">
+              <h3 data-i18n="skills.cards.2.title"></h3>
+              <ul class="skill-list">
+                <li data-i18n="skills.cards.2.items.0"></li>
+                <li data-i18n="skills.cards.2.items.1"></li>
+                <li data-i18n="skills.cards.2.items.2"></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p class="muted">Let's build something together — send a message or email me directly at <a href="mailto:you@example.com">you@example.com</a>.</p>
-
-        <form class="contact-form" action="#" method="post" novalidate>
-          <div class="form-grid">
-            <label>
-              <span class="label-text">Name</span>
-              <input type="text" name="name" required placeholder="Your name">
-            </label>
-
-            <label>
-              <span class="label-text">Email</span>
-              <input type="email" name="email" required placeholder="you@example.com">
-            </label>
-
-            <label class="full">
-              <span class="label-text">Message</span>
-              <textarea name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
-            </label>
-
-            <p class="form-actions">
-              <button class="btn primary" type="submit">Send message</button>
-              <button class="btn outline" type="reset">Reset</button>
-            </p>
+      <!-- CONNECT -->
+      <section id="connect" class="section alt">
+        <div class="container connect">
+          <div class="section-head">
+            <h2 data-i18n="connect.title"></h2>
+            <p class="muted" data-i18n="connect.subtitle"></p>
           </div>
-        </form>
+
+          <div class="connect-grid">
+            <div class="contact-card">
+              <h3 data-i18n="connect.emailTitle"></h3>
+              <p class="muted" data-i18n="connect.emailHint"></p>
+
+              <div class="copy-row">
+                <code id="email">seuemail@dominio.com</code>
+                <button class="btn small" type="button" onclick="copyEmail()" data-i18n="connect.copy"></button>
+              </div>
+
+              <p class="small muted" data-i18n="connect.emailNote"></p>
+            </div>
+
+            <div class="contact-card">
+              <h3 data-i18n="connect.linksTitle"></h3>
+              <ul class="links">
+                <li><a href="https://github.com/SEU_GITHUB" target="_blank" rel="noreferrer">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a></li>
+                <li><a href="#" target="_blank" rel="noreferrer" data-i18n="connect.linksOptional"></a></li>
+              </ul>
+            </div>
+
+            <div class="contact-card">
+              <h3 data-i18n="connect.downloadTitle"></h3>
+              <p class="muted">
+                <span data-i18n="connect.downloadBody"></span>
+                <a class="link" href="assets/cv.pdf" target="_blank" rel="noreferrer" data-i18n="connect.downloadLink"></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Letícia Fuzzatti. <span class="muted" data-i18n="footer.rights"></span></p>
+        <p class="muted">
+          <a href="#" class="link" data-i18n="footer.privacy"></a>
+          <span aria-hidden="true">•</span>
+          <a href="#" class="link" data-i18n="footer.terms"></a>
+        </p>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Your Name — Built with care.</p>
-      <nav aria-label="Footer">
-        <a href="#privacy">Privacy</a>
-        <a href="#terms">Terms</a>
-      </nav>
-    </div>
-  </footer>
+    <script>
+      const I18N = {
+        pt: {
+          "a11y.skip": "Pular para o conteúdo",
 
-  <script>
-    // Small UI helpers: nav toggle + theme toggle + year
-    (function () {
-      const navToggle = document.querySelector('.nav-toggle');
-      const nav = document.getElementById('primary-navigation');
-      navToggle && navToggle.addEventListener('click', () => {
-        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('open');
-      });
+          "nav.work": "Meus Projetos",
+          "nav.about": "Sobre",
+          "nav.skills": "Skills",
+          "nav.connect": "Contato",
 
-      const themeToggle = document.getElementById('theme-toggle');
-      const root = document.documentElement;
-      const stored = localStorage.getItem('theme');
-      if (stored === 'dark' || (!stored && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        root.classList.add('theme-dark');
-        if (themeToggle) themeToggle.textContent = '☀️';
-        if (themeToggle) themeToggle.setAttribute('aria-pressed', 'true');
+          "hero.eyebrow": "Mobile Developer • iOS • Android • Flutter",
+          "hero.title": "Construindo experiências mobile com foco em produto, qualidade e arquitetura.",
+          "hero.lead":
+            "Portfólio em página única para publicar seus apps, libs e estudos — com descrição clara, stack, ano e screenshots.",
+          "hero.ctaProjects": "Ver projetos",
+          "hero.ctaContact": "Falar comigo",
+          "hero.facts.0": "✔️ iOS (UIKit/SwiftUI) + Android (Kotlin/Java) + Flutter",
+          "hero.facts.1": "✔️ Arquitetura (MVVM, modularização), CI/CD e testes",
+          "hero.facts.2": "✔️ Firebase, APIs REST, observabilidade (Sentry/Crashlytics)",
+          "hero.role": "Software Developer (Mobile + Backend)",
+          "hero.emailAnchor": "Email",
+          "hero.note":
+            "Dica: destaque 3–6 projetos principais com screenshots, stack e 2–3 bullets de impacto.",
+
+          "work.title": "Meus Projetos",
+          "work.subtitle":
+            "Cards com stack + ano + descrição + highlights + links + galeria de screenshots.",
+          "work.topTitle": "Top Projects",
+          "work.topSubtitle":
+            "Os projetos que melhor representam seu nível e seu diferencial técnico.",
+          "work.moreTitle": "More Projects",
+          "work.moreSubtitle": "Outros trabalhos, estudos e experimentos (cards compactos).",
+
+          "projects.links.store": "Store",
+          "projects.links.code": "Código",
+          "projects.links.case": "Case / Doc",
+
+          "projects.top1.title": "Projeto Mobile 1 (Top)",
+          "projects.top1.tags.0": "iOS",
+          "projects.top1.tags.1": "SwiftUI",
+          "projects.top1.tags.2": "Firebase",
+          "projects.top1.desc":
+            "Descreva aqui o problema que o app resolve, o contexto e a parte técnica que te diferencia.",
+          "projects.top1.bullets.0": "Arquitetura MVVM + camadas de serviços bem separadas.",
+          "projects.top1.bullets.1": "Observabilidade: logs/breadcrumbs e captura de erros.",
+          "projects.top1.bullets.2": "Estratégia de testes e pipeline de release (quando aplicável).",
+
+          "projects.top2.title": "Projeto Mobile 2 (Top)",
+          "projects.top2.tags.0": "Android",
+          "projects.top2.tags.1": "Kotlin",
+          "projects.top2.tags.2": "Compose",
+          "projects.top2.desc":
+            "Explique o objetivo do app e o que você implementou de engenharia (arquitetura, performance, DX).",
+          "projects.top2.bullets.0": "Modularização por feature e padrões consistentes.",
+          "projects.top2.bullets.1": "Integração com API + cache e tratamento de erros.",
+          "projects.top2.bullets.2": "CI/CD com build, testes e publicação.",
+
+          "projects.top3.title": "Projeto Mobile 3 (Top)",
+          "projects.top3.tags.0": "Flutter",
+          "projects.top3.tags.1": "Dart",
+          "projects.top3.tags.2": "iOS + Android",
+          "projects.top3.desc":
+            "Mostre o diferencial no Flutter: state management, navegação, arquitetura e design system.",
+          "projects.top3.bullets.0": "State management bem definido (GetX/BLoC/Riverpod).",
+          "projects.top3.bullets.1": "Camada de repositório e padrões de dados.",
+          "projects.top3.bullets.2": "Design system e consistência cross-platform.",
+
+          "projects.more1.title": "Projeto Extra 1",
+          "projects.more1.tags.0": "Swift",
+          "projects.more1.tags.1": "UIKit",
+          "projects.more1.desc": "Uma linha para explicar: o que é e por que importa.",
+
+          "projects.more2.title": "Projeto Extra 2",
+          "projects.more2.tags.0": "Backend",
+          "projects.more2.tags.1": "Java/Spring",
+          "projects.more2.desc": "Uma linha: API, integrações, cloud, automações etc.",
+
+          "projects.more3.title": "Projeto Extra 3",
+          "projects.more3.tags.0": "Tooling",
+          "projects.more3.tags.1": "CI/CD",
+          "projects.more3.desc": "Uma linha: scripts, pipelines, automação de release.",
+
+          "about.title": "Sobre",
+          "about.body":
+            "Escreva 5–8 linhas: sua trajetória (mobile), seu diferencial (qualidade/arquitetura) e o tipo de desafio que você gosta.",
+          "about.cards.0.title": "Filosofia",
+          "about.cards.0.body": "Design limpo + arquitetura pragmática + entregas consistentes.",
+          "about.cards.1.title": "Foco",
+          "about.cards.1.body": "iOS/Android/Flutter, MVVM, testes, CI/CD e observabilidade.",
+          "about.highlights.title": "Highlights",
+          "about.highlights.items.0": "Experiência com produtos e integrações backend",
+          "about.highlights.items.1": "Automação de release e pipelines",
+          "about.highlights.items.2": "Acessibilidade, performance e rastreabilidade de erros",
+
+          "skills.title": "Skills",
+          "skills.subtitle": "Organizado em blocos (mobile, backend, ferramentas).",
+          "skills.cards.0.title": "Mobile (UI / App Dev)",
+          "skills.cards.0.items.0": "Swift • UIKit • SwiftUI • Combine",
+          "skills.cards.0.items.1": "Kotlin • Compose • Coroutines",
+          "skills.cards.0.items.2": "Flutter • Dart",
+          "skills.cards.0.items.3": "Arquitetura: MVVM, modularização por feature",
+          "skills.cards.1.title": "Backend & Dados",
+          "skills.cards.1.items.0": "Java • Spring • Node.js",
+          "skills.cards.1.items.1": "Firebase (Realtime DB/Firestore/FCM)",
+          "skills.cards.1.items.2": "REST APIs • Auth • Observabilidade",
+          "skills.cards.2.title": "Ferramentas & Workflow",
+          "skills.cards.2.items.0": "Git • GitHub Actions • Fastlane",
+          "skills.cards.2.items.1": "TestFlight • Play Console",
+          "skills.cards.2.items.2": "Sentry/Crashlytics • logs e métricas",
+
+          "connect.title": "Contato",
+          "connect.subtitle": "Links diretos e email copiável.",
+          "connect.emailTitle": "Email",
+          "connect.emailHint": "Para propostas, freelas ou colaborações:",
+          "connect.copy": "Copiar",
+          "connect.emailNote": "Dica: use um email profissional e mantenha resposta rápida.",
+          "connect.linksTitle": "Links",
+          "connect.linksOptional": "YouTube (opcional)",
+          "connect.downloadTitle": "Download",
+          "connect.downloadBody": "Se quiser, publique seu CV aqui:",
+          "connect.downloadLink": "Baixar CV (PDF)",
+
+          "footer.rights": "Todos os direitos reservados.",
+          "footer.privacy": "Privacy Policy",
+          "footer.terms": "Terms",
+        },
+
+        en: {
+          "a11y.skip": "Skip to content",
+
+          "nav.work": "Projects",
+          "nav.about": "About",
+          "nav.skills": "Skills",
+          "nav.connect": "Contact",
+
+          "hero.eyebrow": "Mobile Developer • iOS • Android • Flutter",
+          "hero.title": "Building mobile experiences with a product mindset, quality, and solid architecture.",
+          "hero.lead":
+            "A single-page portfolio to showcase your apps, libraries, and studies — with clear descriptions, stack, year, and screenshots.",
+          "hero.ctaProjects": "View projects",
+          "hero.ctaContact": "Contact me",
+          "hero.facts.0": "✔️ iOS (UIKit/SwiftUI) + Android (Kotlin/Java) + Flutter",
+          "hero.facts.1": "✔️ Architecture (MVVM, modularization), CI/CD, and testing",
+          "hero.facts.2": "✔️ Firebase, REST APIs, observability (Sentry/Crashlytics)",
+          "hero.role": "Software Developer (Mobile + Backend)",
+          "hero.emailAnchor": "Email",
+          "hero.note":
+            "Tip: feature 3–6 main projects with screenshots, stack, and 2–3 impact bullets.",
+
+          "work.title": "Projects",
+          "work.subtitle":
+            "Cards with stack + year + description + highlights + links + screenshot gallery.",
+          "work.topTitle": "Top Projects",
+          "work.topSubtitle": "The projects that best showcase your level and technical edge.",
+          "work.moreTitle": "More Projects",
+          "work.moreSubtitle": "Other work, studies, and experiments (compact cards).",
+
+          "projects.links.store": "Store",
+          "projects.links.code": "Code",
+          "projects.links.case": "Case / Docs",
+
+          "projects.top1.title": "Mobile Project 1 (Top)",
+          "projects.top1.tags.0": "iOS",
+          "projects.top1.tags.1": "SwiftUI",
+          "projects.top1.tags.2": "Firebase",
+          "projects.top1.desc":
+            "Describe the problem, context, and the technical choices that differentiate your work.",
+          "projects.top1.bullets.0": "MVVM architecture with clean service layers.",
+          "projects.top1.bullets.1": "Observability: logs/breadcrumbs and error capture.",
+          "projects.top1.bullets.2": "Testing strategy and release pipeline (when applicable).",
+
+          "projects.top2.title": "Mobile Project 2 (Top)",
+          "projects.top2.tags.0": "Android",
+          "projects.top2.tags.1": "Kotlin",
+          "projects.top2.tags.2": "Compose",
+          "projects.top2.desc":
+            "Explain the goal and your engineering work (architecture, performance, developer experience).",
+          "projects.top2.bullets.0": "Feature modularization and consistent patterns.",
+          "projects.top2.bullets.1": "API integration + caching and robust error handling.",
+          "projects.top2.bullets.2": "CI/CD with build, tests, and publishing.",
+
+          "projects.top3.title": "Mobile Project 3 (Top)",
+          "projects.top3.tags.0": "Flutter",
+          "projects.top3.tags.1": "Dart",
+          "projects.top3.tags.2": "iOS + Android",
+          "projects.top3.desc":
+            "Show your Flutter edge: state management, navigation, architecture, and design system.",
+          "projects.top3.bullets.0": "Clear state management (GetX/BLoC/Riverpod).",
+          "projects.top3.bullets.1": "Repository layer and data patterns.",
+          "projects.top3.bullets.2": "Design system and cross-platform consistency.",
+
+          "projects.more1.title": "Extra Project 1",
+          "projects.more1.tags.0": "Swift",
+          "projects.more1.tags.1": "UIKit",
+          "projects.more1.desc": "One line: what it is and why it matters.",
+
+          "projects.more2.title": "Extra Project 2",
+          "projects.more2.tags.0": "Backend",
+          "projects.more2.tags.1": "Java/Spring",
+          "projects.more2.desc": "One line: APIs, integrations, cloud, automations, etc.",
+
+          "projects.more3.title": "Extra Project 3",
+          "projects.more3.tags.0": "Tooling",
+          "projects.more3.tags.1": "CI/CD",
+          "projects.more3.desc": "One line: scripts, pipelines, release automation.",
+
+          "about.title": "About",
+          "about.body":
+            "Write 5–8 lines: your journey (mobile), your edge (quality/architecture), and the kind of challenges you enjoy.",
+          "about.cards.0.title": "Philosophy",
+          "about.cards.0.body": "Clean design + pragmatic architecture + consistent delivery.",
+          "about.cards.1.title": "Focus",
+          "about.cards.1.body": "iOS/Android/Flutter, MVVM, testing, CI/CD, and observability.",
+          "about.highlights.title": "Highlights",
+          "about.highlights.items.0": "Experience with products and backend integrations",
+          "about.highlights.items.1": "Release automation and pipelines",
+          "about.highlights.items.2": "Accessibility, performance, and error traceability",
+
+          "skills.title": "Skills",
+          "skills.subtitle": "Organized into blocks (mobile, backend, tooling).",
+          "skills.cards.0.title": "Mobile (UI / App Dev)",
+          "skills.cards.0.items.0": "Swift • UIKit • SwiftUI • Combine",
+          "skills.cards.0.items.1": "Kotlin • Compose • Coroutines",
+          "skills.cards.0.items.2": "Flutter • Dart",
+          "skills.cards.0.items.3": "Architecture: MVVM, feature modularization",
+          "skills.cards.1.title": "Backend & Data",
+          "skills.cards.1.items.0": "Java • Spring • Node.js",
+          "skills.cards.1.items.1": "Firebase (Realtime DB/Firestore/FCM)",
+          "skills.cards.1.items.2": "REST APIs • Auth • Observability",
+          "skills.cards.2.title": "Tooling & Workflow",
+          "skills.cards.2.items.0": "Git • GitHub Actions • Fastlane",
+          "skills.cards.2.items.1": "TestFlight • Play Console",
+          "skills.cards.2.items.2": "Sentry/Crashlytics • logs and metrics",
+
+          "connect.title": "Contact",
+          "connect.subtitle": "Direct links and a copyable email.",
+          "connect.emailTitle": "Email",
+          "connect.emailHint": "For opportunities, freelance work, or collaborations:",
+          "connect.copy": "Copy",
+          "connect.emailNote": "Tip: use a professional email and reply quickly.",
+          "connect.linksTitle": "Links",
+          "connect.linksOptional": "YouTube (optional)",
+          "connect.downloadTitle": "Download",
+          "connect.downloadBody": "If you want, publish your resume here:",
+          "connect.downloadLink": "Download Resume (PDF)",
+
+          "footer.rights": "All rights reserved.",
+          "footer.privacy": "Privacy Policy",
+          "footer.terms": "Terms",
+        },
+      };
+
+      function applyTranslations(lang) {
+        const dict = I18N[lang] || I18N.pt;
+
+        document.querySelectorAll("[data-i18n]").forEach((el) => {
+          const key = el.getAttribute("data-i18n");
+          const value = dict[key];
+          if (value !== undefined) el.textContent = value;
+        });
+
+        document.documentElement.lang = lang === "en" ? "en" : "pt-BR";
+
+        document.querySelectorAll(".lang-switch [data-lang]").forEach((btn) => {
+          const isActive = btn.getAttribute("data-lang") === lang;
+          btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+
+        localStorage.setItem("lang", lang);
       }
 
-      themeToggle && themeToggle.addEventListener('click', () => {
-        const isDark = root.classList.toggle('theme-dark');
-        themeToggle.textContent = isDark ? '☀️' : '🌙';
-        themeToggle.setAttribute('aria-pressed', String(isDark));
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      });
+      function initLanguage() {
+        const saved = localStorage.getItem("lang");
+        const browser = (navigator.language || "")
+          .toLowerCase()
+          .startsWith("pt")
+          ? "pt"
+          : "en";
+        const lang = saved || browser;
 
-      // fill current year
-      const yearEl = document.getElementById('year');
-      if (yearEl) yearEl.textContent = new Date().getFullYear();
-    })();
-  </script>
-</body>
+        applyTranslations(lang);
+
+        document.querySelectorAll(".lang-switch [data-lang]").forEach((btn) => {
+          btn.addEventListener("click", () => applyTranslations(btn.getAttribute("data-lang")));
+        });
+      }
+
+      function copyEmail() {
+        const email = document.getElementById("email")?.textContent?.trim() || "";
+        navigator.clipboard?.writeText(email);
+      }
+      window.copyEmail = copyEmail;
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+      initLanguage();
+    </script>
+  </body>
 </html>
